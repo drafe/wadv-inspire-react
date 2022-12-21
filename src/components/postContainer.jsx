@@ -16,8 +16,8 @@ function PostContainer(props) {
         <div className="postContainer">
             <svg className="post" fill="none" width={w+"px"} height={h+"px"} xmlns="http://www.w3.org/2000/svg">
                 <linearGradient id={"gradient"} x1="0%" x2="100%" y1="0%" y2="100%">
-                    <stop id="gradient-left" offset="0%" stopColor={props.colors[0]} stopOpacity="1"/>
-                    <stop id="gradient-right" offset="100%" stopColor={props.colors[1]} stopOpacity="1"/>
+                    <stop id="gradient-left" offset="0%" stopColor={"#"+props.colors[0]} stopOpacity="1"/>
+                    <stop id="gradient-right" offset="100%" stopColor={"#"+props.colors[1]} stopOpacity="1"/>
                 </linearGradient>
 
                 <rect id="background" x="0" y="0" width={w+"px"} height={h+"px"} rx="10" ry="10"
