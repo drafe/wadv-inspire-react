@@ -1,9 +1,7 @@
 function PostContainer(props) {
     const [w,h,font_size, max_let] = [500, 300, 20, 44];
-    // const [s_w, s_h] = ["${w}", h/2]
     const [q_w, q_h] = [w*0.5, h*0.4]
-    const [a_w, a_h] = [w*0.9, h*0.8]
-    // console.log(props.colors)
+    const [a_w, a_h, a_fs] = [w*0.9, h*0.8, font_size-2]
     let quote_lines = []
     let t = props.quote.text
     while (t.length > max_let){
@@ -25,12 +23,12 @@ function PostContainer(props) {
                 <rect id="background" x="0" y="0" width={w+"px"} height={h+"px"} rx="10" ry="10"
                       style={{fill:"url(#gradient)"}}
                 />
-                <text x={q_w+"px"} y={q_h+"px"} fill="black" fontSize="20px" textAnchor="middle">
+                <text x={q_w+"px"} y={q_h+"px"} fill="black" fontSize={font_size+"px"} textAnchor="middle">
                     {quote_lines.map(qt => {
                         return <tspan dy={"1.1em"} x={q_w+"px"} textAnchor="middle">{qt}</tspan>
                     })}
                 </text>
-                <text x={a_w+"px"} y={a_h+"px"} fill="black" fontSize="18px" textAnchor="end">{props.quote.author}</text>;
+                <text x={a_w+"px"} y={a_h+"px"} fill="black" fontSize={a_fs+"px"} textAnchor="end">{props.quote.author}</text>;
 
             </svg>
         </div>

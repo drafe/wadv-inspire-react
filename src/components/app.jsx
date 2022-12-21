@@ -1,6 +1,4 @@
-// import {LaunchList} from "./launchList";
-// import {Map} from "./map";
-import {useEffect, useRef, useState} from "react";
+import {useEffect, useState} from "react";
 import {Colors} from "../api/colors";
 import {Inspire} from "../api/inspire";
 import {PostContainer} from "./postContainer";
