@@ -11,15 +11,15 @@ function App(){
     useEffect(()=>{
         insp.quotes().then(data =>{
             setQuotes(data)
-        },[])
-    })
+        })
+    },[])
     const [colors, setColors] = useState([]);
     const col = new Colors();
     useEffect(()=>{
         col.tagged().then(data =>{
             setColors(data)
-        },[])
-    })
+        })
+    },[])
     const [color, setColor] = useState(["fff", "000"]);
     const [quote, setQuote] = useState({text:"to inspiration click button next", author:"."})
     const [click, setClick] = useState(0);
